@@ -1,0 +1,32 @@
+curl "https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=bin AS id,heightroof AS z,extent(the_geom) AS r"
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=the_geom%20AS%20r,bin%20AS%20id,heightroof%20AS%20z
+
+# https://data.cityofnewyork.us/resource/e42i-6hpb.json?$limit=5&$select=count(*)&$where=bin between 
+
+#top limit
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=bin,bbl&$where=bin%20between%201089000%20and%201900000
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=bin,bbl&$where=bin%20between%201000002%20and%201089000
+
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=bin,bbl&$where=bbl between 1000000000 and 1000020001
+
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$limit=50000&$select=the_geom%20AS%20r,bin%20AS%20id,heightroof%20AS%20z&$where=bin%20between%201000002%20and%201089000
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=bin,bbl&$where=bin%20between%201086428%20and%201086430
+
+https://soda.demo.socrata.com/resource/4tka-6guv.json?$select=bin,bbl&$where=bin%20between%201086428%20and%201086430
+
+#all geom in manhattan
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$limit=50000&$select=the_geom%20AS%20r,bin,bbl,heightroof%20AS%20z&$where=bin%20between%201000002%20and%201089000
+
+#simplified geom in manhattan simplify_preserve_topology(the_geom,1)
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$limit=50000&$select=simplify_preserve_topology(the_geom,1)%20AS%20r,bin%20AS%20id,heightroof%20AS%20z&$where=bin%20between%201000002%20and%201089000
+
+
+simplify_preserve_topology(...)
+
+https://data.cityofnewyork.us/resource/e42i-6hpb.json?$select=bin,the_geom&$where=bin%20between%201050734%20and%201050734
