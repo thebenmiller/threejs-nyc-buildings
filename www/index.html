@@ -138,7 +138,7 @@
         g_buildings.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
         g_buildings.addAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
         g_buildings.computeBoundingSphere();
-        mesh = new THREE.Line( g_buildings, m_buildings );
+        mesh = new THREE.LineSegments( g_buildings, m_buildings );
         scene.add( mesh );
 
         
